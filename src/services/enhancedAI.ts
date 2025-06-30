@@ -38,40 +38,13 @@ interface AIResponse {
 export class EnhancedAIService {
   private static providers: AIProvider[] = [
     {
-      name: 'Anthropic Claude',
-      apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
-      endpoint: 'https://api.anthropic.com/v1/messages',
-      model: 'claude-3-5-sonnet-20241022',
+      name: 'OpenAI',
+      apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+      endpoint: 'https://api.openai.com/v1/chat/completions',
+      model: 'gpt-3.5-turbo',
       maxTokens: 1000,
       temperature: 0.7,
-      priority: 10 // Highest priority for parenting advice
-    },
-    {
-      name: 'DeepSeek',
-      apiKey: import.meta.env.VITE_DEEPSEEK_API_KEY,
-      endpoint: 'https://api.deepseek.com/v1/chat/completions',
-      model: 'deepseek-chat',
-      maxTokens: 1000,
-      temperature: 0.6,
-      priority: 9 // Excellent for complex reasoning
-    },
-    {
-      name: 'Groq',
-      apiKey: import.meta.env.VITE_GROQ_API_KEY,
-      endpoint: 'https://api.groq.com/openai/v1/chat/completions',
-      model: 'llama-3.1-70b-versatile',
-      maxTokens: 800,
-      temperature: 0.7,
-      priority: 8 // Fast responses
-    },
-    {
-      name: 'Together AI',
-      apiKey: import.meta.env.VITE_TOGETHER_API_KEY,
-      endpoint: 'https://api.together.xyz/v1/chat/completions',
-      model: 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo',
-      maxTokens: 800,
-      temperature: 0.7,
-      priority: 7 // Good backup option
+      priority: 10 // Highest priority for general AI
     }
   ];
 

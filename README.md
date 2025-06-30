@@ -152,6 +152,18 @@ The app recognizes emergency situations and provides:
 - Poison control information
 - Safety protocols
 
+## Environment Variables
+
+To enable AI features, set the following environment variables in your `.env` file (or in Vercel/GitHub project settings):
+
+```
+VITE_OPENAI_API_KEY=your-openai-key-here
+VITE_SERPER_API_KEY=your-serper-key-here
+VITE_DEEPSEEK_API_KEY=your-deepseek-key-here
+```
+
+Replace the values with your actual API keys. Never commit real API keys to public repositories.
+
 ---
 
 **Ready to support parents everywhere! 🍼👶**
